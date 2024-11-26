@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 32vmin;
   pointer-events: none;
 }
 
@@ -21,11 +21,12 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  font-family: Inter, sans-serif;
+  color: #374159;
 }
 
 .App-link {
-  color: #61dafb;
+  font-family:"Calibri Light", sans-serif;
 }
 
 @keyframes App-logo-spin {

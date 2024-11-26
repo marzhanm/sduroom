@@ -10,9 +10,9 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="App-header">
             {/* Header */}
-            <header className="w-full h-16 bg-[#759CB2]" />
+            <header className="w-full h-16 bg-[#CFD9E6]" />
 
             {/* Main content */}
             <main className="flex-1 flex flex-col items-center mt-8">
@@ -21,15 +21,16 @@ const Login = () => {
                     <img
                         src="/icons/logo.svg"
                         alt="SDURoom Logo"
-                        className="mx-auto mb-4"
+                        className="mx-auto mb-4 text-center"
                     />
-                    <h1 className="text-2xl font-bold text-gray-800">SDURoom</h1>
+                    <h1 className="text-2xl font-bold text-gray-800 App-link">SDURoom</h1>
                 </div>
 
                 {/* Login Form */}
-                <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg mx-4">
+                <div className="w-full max-w-md p-8 space-y-6 bg-#092B7E99 rounded-lg shadow-lg mx-4">
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
+                            <img src="/icons/prof.svg" alt="Login Profile" />
                             <label
                                 htmlFor="username"
                                 className="block text-sm font-medium text-gray-700"
@@ -38,7 +39,7 @@ const Login = () => {
                             </label>
                             <input
                                 id="username"
-                                type="text"
+                                type="Username"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -47,6 +48,7 @@ const Login = () => {
                         </div>
 
                         <div>
+                            <img src="/icons/key.svg" alt="Login Profile" />
                             <label
                                 htmlFor="password"
                                 className="block text-sm font-medium text-gray-700"
@@ -63,24 +65,25 @@ const Login = () => {
                             />
                         </div>
 
+                        <div className="text-center">
+                            <label>Forgot password?</label>
+                            {/*<a*/}
+                            {/*    href="#"*/}
+                            {/*    className="text-sm text-blue-600 hover:text-blue-800"*/}
+                            {/*>*/}
+                            {/*    Forgot password?*/}
+                            {/*</a>*/}
+                        </div>
+
                         <div className="flex items-center justify-between">
                             <button
                                 type="submit"
-                                className="w-full bg-[#759CB2] text-white py-2 px-4 rounded-md hover:bg-[#648a9f] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                className="w-full bg-[#374159] text-white py-2 px-4 rounded-md hover:bg-[#648a9f] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             >
                                 Sign In
                             </button>
                         </div>
                     </form>
-
-                    <div className="text-center">
-                        <a
-                            href="#"
-                            className="text-sm text-blue-600 hover:text-blue-800"
-                        >
-                            Forgot password?
-                        </a>
-                    </div>
                 </div>
             </main>
         </div>
