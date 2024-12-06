@@ -1,0 +1,165 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Inter, sans-serif;
+    background-color: #CFD9E6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #759CB2;
+    padding: 33px 20px;
+    width: 100%;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 180px;
+    width: 90%;
+    height: 300%;
+}
+
+.profile-card {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    font-family: Inter, sans-serif ;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-card h2 {
+    width: 236px;
+    height: 30px;
+    margin-top: 2px;
+    margin-left: 179px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.profile-card p{
+    height: auto;
+    margin-top: 3px;
+    color: #374159;
+    padding-left: 179px;
+    font-size: 17px;
+}
+
+.write-entry {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #374159E5;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 179px;
+}
+
+.write-entry:hover {
+    background-color: #0056b3;
+}
+
+/* Info Section */
+
+.info-section {
+    margin-left: 300px;
+    margin-top: -70px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+}
+
+.contribution, .reposts {
+    background-color: #394264;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    height: 300px; /* Increased height for a larger appearance */
+    width: 120%; /* Increased width */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+.contribution h3, .reposts h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+}
+
+
+
+.contribution ul, .reposts ul {
+    list-style: none;
+}
+
+.contribution li, .reposts li {
+    padding-left: 10px;
+    margin-top: -85px;
+    text-decoration: underline;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+}
+
+
+
+.contribution .count {
+    color: #f39c12;
+}
+
+.reposts li a {
+    color: #b3e6ff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.reposts li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
