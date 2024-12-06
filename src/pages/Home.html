@@ -3,37 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Home Page</title>
+    <title>SDUroom Home Page</title>
+    <link rel = "icon" type = "image/png" href = "/public/icons/sdulogo.svg"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function toggleProfileDropdown() {
+            const dropdown = document.getElementById('profileDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdown if clicked outside
+        window.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('profileDropdown');
+            const profileIcon = document.getElementById('profileIcon');
+            if (!profileIcon.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });</script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-[#CFD9E6]">
 <!-- Header -->
-<header class="bg-white shadow-md flex justify-between items-center p-4">
+<header class="bg-[#759CB29E] shadow-md flex justify-between items-center p-4">
     <div class="flex items-center">
-        <img src="/icons/sdulogo.svg" alt="SDUroom Logo" class="h-10">
+        <img src="/public/icons/sdulogo.svg" alt="SDUroom Logo" class="h-10">
+        <p class="text-[#374159]">SDURoom</p>
     </div>
     <div class="flex items-center space-x-4">
+        <select class="bg-[#759CB29E]">
+        <option>EN</option>
+        <option>KZ</option>
+        <option>RU</option>
+    </select>
         <i class="fas fa-bell text-gray-600 cursor-pointer"></i>
-        <select class="border rounded px-2 py-1">
-            <option>EN</option>
-            <option>KZ</option>
-            <option>RU</option>
-        </select>
-        <i class="fas fa-user-circle text-gray-600 text-xl cursor-pointer"></i>
+
+        <div class="relative">
+            <i
+                    id="profileIcon"
+                    onclick="toggleProfileDropdown()"
+                    class="fas fa-user-circle text-gray-600 text-xl cursor-pointer"
+            ></i>
+
+            <!-- Profile Dropdown -->
+            <div
+                    id="profileDropdown"
+                    class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-10"
+            >
+                <ul class="py-1">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                            <i class="fas fa-user mr-2"></i> Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                            <i class="fas fa-sign-out-alt mr-2"></i> Sign Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     </div>
 </header>
 
 <div class="container mx-auto mt-6 grid grid-cols-12 gap-6">
     <!-- Left Sidebar - Faculties -->
-    <div class="col-span-3 bg-blue-100 p-4 rounded-lg">
-        <h2 class="text-xl font-bold mb-4">Faculties</h2>
-        <ul class="space-y-2">
-            <li class="bg-white p-2 rounded hover:bg-blue-50 cursor-pointer">Computer Science</li>
-            <li class="bg-white p-2 rounded hover:bg-blue-50 cursor-pointer">Engineering</li>
-            <li class="bg-white p-2 rounded hover:bg-blue-50 cursor-pointer">Business</li>
-            <li class="bg-white p-2 rounded hover:bg-blue-50 cursor-pointer">Arts & Humanities</li>
-            <li class="bg-white p-2 rounded hover:bg-blue-50 cursor-pointer">Natural Sciences</li>
+    <div class="col-span-3 bg-[#759CB29E] p-4 rounded-lg text-[#374159]">
+        <h2 class="text-xl font-bold mb-4 text-center">Faculties</h2>
+        <ul class="space-y-1">
+            <li class="p-2 rounded hover:bg-blue-50 cursor-pointer">Business School</li>
+            <li lang="ru" class="p-2 rounded hover:bg-gray-50 cursor-pointer hidden">Бизнес Школа</li>
+            <li class="p-2 rounded hover:bg-blue-50 cursor-pointer">Education and Humanities</li>
+            <li class="p-2 rounded hover:bg-blue-50 cursor-pointer">Engineering and Natural Sciences</li>
+            <li class="p-2 rounded hover:bg-blue-50 cursor-pointer">Law and Social Sciences</li>
+            <li class="p-2 rounded hover:bg-blue-50 cursor-pointer">Multidisciplinary Education</li>
         </ul>
     </div>
 
@@ -42,33 +86,32 @@
         <!-- Search Box -->
         <div class="relative mb-6">
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <i class="fas fa-search text-gray-400"></i>
+                <i class="bg-[#759CB291] fas fa-search text-[#374159]"></i>
             </div>
             <input
                     type="text"
-                    placeholder="Search questions, posts, faculties..."
-                    class="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Search"
+                    class="bg-[#759CB2] text-white w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
             <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                <i class="fas fa-circle text-green-500 text-xs mr-2"></i>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Search</button>
+<!--                <i class="fas fa-circle text-green-500 text-xs mr-2"></i>-->
+                <button class="bg-[#759CB2] text-[#374159] px-4 py-2 rounded-lg">Search</button>
             </div>
         </div>
 
         <!-- Sample Posts -->
         <div class="space-y-4">
             <!-- Post 1 -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
+            <div class="bg-[#D9D9D9] p-4 rounded-lg shadow-md">
                 <div class="flex items-center mb-2">
-                    <img src="/api/placeholder/40/40" alt="Profile" class="rounded-full mr-3">
                     <div>
-                        <p class="font-bold">John Doe</p>
-                        <p class="text-sm text-gray-500">@johnd</p>
+                        <p class="font-bold">My Experience with Calculus: A Journey of Challenge and Growth</p>
+                        <p class="text-sm text-gray-500">@ibra4pm</p>
                     </div>
-                    <span class="ml-auto text-sm text-gray-500">2 hours ago</span>
+                    <span class="ml-auto text-sm text-gray-500">15 hours ago</span>
                 </div>
-                <p class="mb-3">Exciting new research project launching next month! Looking for passionate students to join our team.</p>
-                <img src="/api/placeholder/500/300" alt="Post Image" class="w-full rounded-lg mb-3">
+                <p class="mb-3">Calculus was, without a doubt, one of the most challenging subjects I’ve ever encountered. At first, I felt completely lost in the sea of derivatives, integrals, and limits. I remember staring at complex equations, thinking I would never fully understand them. There were times I doubted myself and wondered if I could ever get through it.But looking back, I now see how those struggles shaped me. Calculus taught me more than just solving equations—it taught me how to think critically, approach problems step by step, and be patient with the process...<a href="#" class="text-blue-500">See more</a></p>
+                <img src="/public/image%201.png" alt="Post Image" class="w-54 rounded-lg mb-3">
                 <div class="flex justify-between items-center">
                     <div class="flex space-x-4">
                         <button class="flex items-center text-gray-600">
@@ -84,12 +127,12 @@
                             <i class="fas fa-comment mr-2"></i> 8
                         </button>
                     </div>
-                    <a href="#" class="text-blue-500">See more</a>
+
                 </div>
             </div>
 
             <!-- Post 2 -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
+            <div class="bg-[#D9D9D9] p-4 rounded-lg shadow-md">
                 <div class="flex items-center mb-2">
                     <img src="/api/placeholder/40/40" alt="Profile" class="rounded-full mr-3">
                     <div>
@@ -120,7 +163,7 @@
             </div>
 
             <!-- Post 3 -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
+            <div class="bg-[#D9D9D9] p-4 rounded-lg shadow-md">
                 <div class="flex items-center mb-2">
                     <img src="/api/placeholder/40/40" alt="Profile" class="rounded-full mr-3">
                     <div>
@@ -153,20 +196,23 @@
     </div>
 
     <!-- Right Sidebar - Trending Questions -->
-    <div class="col-span-3 bg-white p-4 rounded-lg">
-        <h2 class="text-xl font-bold mb-4">Trending Questions</h2>
+    <div class="col-span-3 bg-[#374159E5] p-4 rounded-lg">
+        <h2 class="text-white text-center font-bold mb-4">Trending Questions</h2>
         <ul class="space-y-3">
             <li class="border-b pb-2">
-                <a href="#" class="text-blue-600 hover:underline">How to start research in AI?</a>
+                <a href="#" class="text-white hover:underline">What are the best study techniques for retaining course material?</a>
             </li>
             <li class="border-b pb-2">
-                <a href="#" class="text-blue-600 hover:underline">Best internship opportunities</a>
+                <a href="#" class="text-white hover:underline">How do I ask for help or clarification from my professors?</a>
             </li>
             <li class="border-b pb-2">
-                <a href="#" class="text-blue-600 hover:underline">Upcoming university events</a>
+                <a href="#" class="text-white hover:underline">Is it better to focus on my GPA or gaining practical experience?</a>
             </li>
             <li class="border-b pb-2">
-                <a href="#" class="text-blue-600 hover:underline">Exchange program details</a>
+                <a href="#" class="text-white hover:underline">How do I choose elective courses that will benefit my career?</a>
+            </li>
+            <li class="border-b pb-2">
+                <a href="#" class="text-white hover:underline">How do I approach group projects when teammates are not collaborating?</a>
             </li>
         </ul>
     </div>
