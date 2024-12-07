@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Inter, sans-serif;
+    background-color: #CFD9E6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #759CB2;
+    padding: 33px 20px;
+    width: 100%;
+}
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.container {
+    width: 70%;
+    margin: 30px auto;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.username{
+    font-size: 12px;
+}
+.author {
+    font-size: 14px;
+    color: #759CB2;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.text {
+    flex: 2;
+    color: #374159;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.comments {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.comment .text {
+    font-size: 14px;
+    color: #555;
+}
+
+.comment .actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.comment .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+}
+
+.comment .actions button:hover {
+    color: #003366;
+}
+
+.add-comment {
+    margin-top: 20px;
+}
+
+.add-comment input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 0;
+}
+
+.add-comment button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #00509e;
+}
