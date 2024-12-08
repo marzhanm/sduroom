@@ -10,7 +10,7 @@ body {
 .top-bar{
     width: 100%;
     background-color: #759CB2; /* Light blue bar */
-    padding: 50px 0; /* Space inside the bar */
+    padding: 30px 0; /* Space inside the bar */
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
     position: fixed; /* Fixed position to keep it at the top */
@@ -20,17 +20,16 @@ body {
 }
 .sdu{
     width: 100%;
-    padding: 20px 0; /* Space inside the bar */
+    padding: 50px 0; /* Space inside the bar */
     text-align: center;
     position: fixed; /* Fixed position to keep it at the top */
-    top: 180px;
+    top: 50px;
     left: 0;
     z-index: 1000;
 }
 .sdu h1 {
     font-size: 50px;
     color: #374159;
-    margin-top: 0;
     font-family: Italiana, sans-serif;
     padding-top: 0;
     line-height: 0;
@@ -38,7 +37,7 @@ body {
 
 .sdu .logo {
     max-width: 350px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     margin-top: 0;
 }
 /* Container */
@@ -51,12 +50,14 @@ body {
     padding: 33px;
     text-align: center;
     position: fixed;
+    z-index: 999;
 }
 
 /* Logo and Header */
 .logo {
     max-width: 100px;
     margin: 0 auto 15px;
+    margin-outside: auto;
 }
 
 h1 {
