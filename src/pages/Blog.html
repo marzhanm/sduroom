@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .logo-placeholder {
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #666;
+    }
+  </style>
+</head>
+<body class="bg-[#CFD9E6]">
+<header class="bg-[#759CB29E] shadow-md flex justify-between items-center p-4">
+  <div class="flex items-center">
+    <img src="/public/icons/sdulogo.svg" alt="SDUroom Logo" class="h-10">
+    <p class="text-[#374159]">SDURoom</p>
+  </div>
+  <div class="flex items-center space-x-4">
+    <select class="bg-[#759CB29E]">
+      <option>EN</option>
+      <option>KZ</option>
+      <option>RU</option>
+    </select>
+    <i class="fas fa-bell text-gray-600 cursor-pointer"></i>
+
+    <div class="relative">
+      <i
+              id="profileIcon"
+              onclick="toggleProfileDropdown()"
+              class="fas fa-user-circle text-gray-600 text-xl cursor-pointer"
+      ></i>
+
+      <!-- Profile Dropdown -->
+      <div
+              id="profileDropdown"
+              class="hidden absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-10"
+      >
+        <ul class="py-1">
+          <li>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              <i class="fas fa-user mr-2"></i> Profile
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              <i class="fas fa-sign-out-alt mr-2"></i> Sign Out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</header>
+<div class="container mx-auto bg-white shadow-lg rounded-lg p-6 flex">
+  <div class="w-3/4 pr-6">
+
+    <div class="mb-4">
+      <h2 class="text-lg font-semibold mb-2">New Text</h2>
+
+      <div class="mb-4">
+        <span class="text-gray-600">The current text is edited by:</span>
+        <label>@nedoaruzhan</label>
+      </div>
+      <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="heading">
+        Heading
+      </label>
+      <input type="text" id="heading" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="content">
+        Content
+      </label>
+      <textarea id="content" class="w-full h-64 p-3 border rounded resize-y" placeholder="Enter your text here..."></textarea>
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2">
+        Add Images:
+      </label>
+      <div class="flex items-center">
+        <input type="file" id="image-upload" accept="image/*" multiple class="mr-4">
+        <span id="file-status" class="text-gray-600">No file selected</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-1/4 pl-4 border-l">
+    <div class="logo-placeholder h-48 mb-6">
+      <img src="/public/icons/sdulogo.svg" alt="SDUroom Logo" class="h-100">
+    </div>
+
+    <div class="space-y-4">
+      <button class="w-full bg-[#374159E5] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Publicate
+      </button>
+      <button class="w-full bg-[#374159E5] hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        Preview
+      </button>
+      <button class="w-full bg-[#374159E5] hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+        Save in Drafts
+      </button>
+      <button class="w-full bg-[#374159E5] hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('image-upload').addEventListener('change', function(e) {
+    const fileStatus = document.getElementById('file-status');
+    if (this.files.length > 0) {
+      fileStatus.textContent = `${this.files.length} file${this.files.length !== 1 ? 's' : ''} selected`;
+    } else {
+      fileStatus.textContent = 'No file selected';
+    }
+  });
+</script>
+</body>
+</html>
