@@ -42,7 +42,7 @@ body {
 .main-content {
     display: flex;
     justify-content: space-between;
-    padding: 180px;
+    padding: 90px;
     width: 90%;
     height: 300%;
 }
